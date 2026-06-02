@@ -31,7 +31,6 @@ const CharInfo = (props) => {
     }
 
     const onCharLoaded = (char) => {
-        console.log(char);
         setChar(char);
     }
 
@@ -52,7 +51,6 @@ const CharInfo = (props) => {
 
 const View = ({char}) => {
     const {name, description, thumbnail, homepage, wiki, comics} = char;
-    console.log(comics);
 
     let imgStyle = {'objectFit' : 'cover'};
     if (thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
@@ -83,7 +81,6 @@ const View = ({char}) => {
                 {comics.length > 0 ? null : 'There is no comics with this character'}
                 {
                     comics.map((item, i) => {
-                        console.log(item);
                         // eslint-disable-next-line
                         if (i > 9) return;
                         return (
